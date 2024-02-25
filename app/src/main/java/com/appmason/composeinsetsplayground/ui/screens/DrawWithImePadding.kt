@@ -8,9 +8,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.imeNestedScroll
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.isImeVisible
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -27,10 +26,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun DrawWithImePadding() {
     Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .statusBarsPadding()
-            .navigationBarsPadding()
+        modifier = Modifier.fillMaxSize().systemBarsPadding()
     ) {
         LazyColumn(
             modifier = Modifier.weight(1f).imeNestedScroll(),
@@ -44,9 +40,9 @@ fun DrawWithImePadding() {
         var textFieldValue by remember { mutableStateOf(TextFieldValue()) }
 
         TextField(
+            modifier = Modifier.fillMaxWidth().imePadding(),
             value = textFieldValue,
             onValueChange = { textFieldValue = it },
-            modifier = Modifier.fillMaxWidth().imePadding(),
             placeholder = {
                 Text(text = "Is visible: ${WindowInsets.isImeVisible}")
             }

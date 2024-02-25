@@ -12,6 +12,6 @@ fun DrawEdgeToEdge() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Color.Blue)
+            .background(color = Color.DarkGray)
     )
 }

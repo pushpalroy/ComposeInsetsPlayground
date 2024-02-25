@@ -9,9 +9,10 @@ import com.appmason.composeinsetsplayground.ui.screens.DrawWithBuiltInPaddingMod
 import com.appmason.composeinsetsplayground.ui.screens.DrawWithImePadding
 import com.appmason.composeinsetsplayground.ui.screens.DrawWithInsetSizeModifiers
 import com.appmason.composeinsetsplayground.ui.screens.DrawWithScaffoldAndInsetConsumption
-import com.appmason.composeinsetsplayground.ui.screens.DrawWithWindowInsetsConsumption
+import com.appmason.composeinsetsplayground.ui.screens.DrawWithWindowInsetsConsumption1
+import com.appmason.composeinsetsplayground.ui.screens.DrawWithWindowInsetsConsumption2
+import com.appmason.composeinsetsplayground.ui.screens.DrawWithWindowInsetsConsumption3
 import com.appmason.composeinsetsplayground.ui.screens.DrawWithWindowInsetsPadding
-import com.appmason.composeinsetsplayground.ui.screens.UnderstandInsetConsumption
 import com.appmason.composeinsetsplayground.ui.theme.ComposeInsetsPlaygroundTheme
 
 class MainActivity : ComponentActivity() {
@@ -27,11 +28,11 @@ class MainActivity : ComponentActivity() {
              */
             ComposeInsetsPlaygroundTheme {
                 // Edge to edge without insets
-                // DrawEdgeToEdge()
+                DrawEdgeToEdge()
 
                 // With padding modifiers
                 // Applies the given window insets as padding
-                DrawWithWindowInsetsPadding()
+                // DrawWithWindowInsetsPadding()
                 // DrawWithImePadding()
                 // DrawWithBuiltInPaddingModifiers()
 
@@ -41,8 +42,9 @@ class MainActivity : ComponentActivity() {
 
                 // Inset Consumption
                 // Doc: https://developer.android.com/jetpack/compose/layouts/insets#inset-consumption
-                // UnderstandInsetConsumption()
-                // DrawWithWindowInsetsConsumption()
+                // DrawWithWindowInsetsConsumption1()
+                // DrawWithWindowInsetsConsumption2()
+                // DrawWithWindowInsetsConsumption3()
                 // DrawWithScaffoldAndInsetConsumption()
             }
         }

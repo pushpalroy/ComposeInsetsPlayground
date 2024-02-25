@@ -19,13 +19,13 @@ import androidx.compose.ui.graphics.Color
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun UnderstandInsetConsumption() {
+fun DrawWithWindowInsetsConsumption2() {
     Scaffold { innerPadding ->
         // innerPadding contains inset information for you to use and apply
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .background(color = Color.Blue)
+                .background(color = Color.LightGray)
                 .padding(innerPadding)
                 // Consume this insets so that it's not applied again when using safeDrawing in the hierarchy below
                 .consumeWindowInsets(innerPadding)
@@ -39,7 +39,7 @@ fun UnderstandInsetConsumption() {
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(color = Color.Green)
+                        .background(color = Color.DarkGray)
                 )
             }
         }
